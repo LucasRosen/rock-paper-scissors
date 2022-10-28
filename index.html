@@ -1,0 +1,42 @@
+<script>
+    let playerSelection;
+    let array = ["rock", "paper", "scissors"];
+
+
+    function getComputerChoice() {
+        let randItem = array[Math.floor(Math.random() * array.length)];
+        
+        return randItem;
+    }
+
+    function playRound(playerSelection, computerSelection) {
+        console.log("You picked " + playerSelection)
+        console.log("Opponent picked " + computerSelection)
+
+        if (playerSelection == "rock" && computerSelection == "scissors") {
+            // Rock wins
+            console.log("You win! Rock beats Scissors");
+        } else if (playerSelection == "rock" && computerSelection == "paper") {
+            // Rock loses
+            console.log("You lose! Paper beats Rock");
+        } else if (playerSelection == "paper" && computerSelection == "scissors") {
+            // paper loses
+            console.log("You lose! scissors beats paper");
+        } else if (playerSelection == computerSelection) {
+            // Tie
+            console.log("Tie!");
+        }
+
+        console.log("--------------------------")
+    }
+
+    function game() {
+        for (i = 0; i < 5; i++) {
+            playerSelection = prompt("Pick Rock, Paper or Scissors").toLowerCase();
+
+            playRound(playerSelection, getComputerChoice());
+        }
+    }
+
+    game();
+</script>
