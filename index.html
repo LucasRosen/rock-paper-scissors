@@ -1,10 +1,10 @@
 <script>
     let playerSelection;
-    let array = ["rock", "paper", "scissors"];
+    const items = ["rock", "paper", "scissors"];
 
 
     function getComputerChoice() {
-        let randItem = array[Math.floor(Math.random() * array.length)];
+        let randItem = items[Math.floor(Math.random() * items.length)];
         
         return randItem;
     }
