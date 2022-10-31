@@ -1,3 +1,5 @@
+let playerScore = 0;
+let computerScore = 0;
 let playerSelection;
 const items = ["rock", "paper", "scissors"];
 
@@ -20,12 +22,31 @@ function playRound(playerSelection, computerSelection) {
         playerSelection == "scissors" && computerSelection == "paper") { // Check all player win scenarios
         // Player wins
         resultsText.textContent = "You win!";
+        playerScore += 1;
+
+        calcScore();
     } else {
         // Computer wins
         resultsText.textContent = "You lose!";
+        computerScore += 1;
+
+        calcScore();
     }
 
     console.log("--------------------------");
+}
+
+function calcScore() {
+    if (playerScore == 5 || computerScore == 5) {
+        // End game
+        if (playerScore > computerScore) {
+            // Player won
+            resultsText.textContent = "You won the game!";
+        } else {
+            // Computer won
+            resultsText.textContent = "You lost the game :(";
+        }
+    }
 }
 
 
