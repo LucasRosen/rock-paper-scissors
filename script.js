@@ -23,12 +23,14 @@ function playRound(playerSelection, computerSelection) {
         // Player wins
         resultsText.textContent = "You win!";
         playerScore += 1;
+        playerScoreDisplay.textContent = playerScore;
 
         calcScore();
     } else {
         // Computer wins
         resultsText.textContent = "You lose!";
         computerScore += 1;
+        computerScoreDisplay.textContent = computerScore;
 
         calcScore();
     }
@@ -48,6 +50,10 @@ function calcScore() {
         }
     }
 }
+
+
+const playerScoreDisplay = document.querySelector("#player-score");
+const computerScoreDisplay = document.querySelector("#computer-score");
 
 
 const statusContainer = document.createElement("div");
