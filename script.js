@@ -9,21 +9,30 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    console.log("You picked " + playerSelection)
-    console.log("Opponent picked " + computerSelection)
+    console.log("You picked " + playerSelection);
+    console.log("Opponent picked " + computerSelection);
 
     if (playerSelection == computerSelection) {
         // Tie
-        console.log("Tie!")
+        console.log("Tie!");
     } else if (playerSelection == "rock" && computerSelection == "scissors" || 
         playerSelection == "paper" && computerSelection == "rock" ||
         playerSelection == "scissors" && computerSelection == "paper") { // Check all player win scenarios
         // Player wins
-        console.log("You win!" + playerSelection + " beats " + computerSelection)
+        console.log("You win!" + playerSelection + " beats " + computerSelection);
     } else {
         // Computer wins
-        console.log("You lose!" + computerSelection + " beats " + playerSelection)
+        console.log("You lose!" + computerSelection + " beats " + playerSelection);
     }
 
-    console.log("--------------------------")
+    console.log("--------------------------");
 }
+
+
+const buttons = document.querySelectorAll("#btn-container > button");
+
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        playRound(button.classList.value, getComputerChoice())
+    });
+});
