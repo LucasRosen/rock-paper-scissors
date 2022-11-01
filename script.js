@@ -57,6 +57,7 @@ const computerScoreDisplay = document.querySelector("#computer-score");
 
 
 const statusContainer = document.createElement("div");
+statusContainer.classList.add("status-container")
 document.body.insertBefore(statusContainer, document.querySelector("#btn-container"));
 
 

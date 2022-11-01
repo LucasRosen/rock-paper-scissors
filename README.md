@@ -2,6 +2,5 @@
 
 Assingment from The Odin Project
 
-TODO:
-- Add any css at all lol
+- TODO:
 - Replace buttons with images
