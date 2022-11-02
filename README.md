@@ -1,5 +1,5 @@
 # rock-paper-scissors
 
-Assingment from The Odin Project
+class
 
 ignore the alignment pls :(
