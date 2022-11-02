@@ -24,7 +24,7 @@ p {
     display: flex;
     justify-content: center;
 
-    width: 80vw;
+    width: 80%;
 }
 
 .player-container {
@@ -35,8 +35,8 @@ p {
     justify-content: center;
     align-items: flex-end;
 
-    padding: 1.2vw;
-    font-size: 3vw;
+    padding: 1.2%;
+    font-size: 3vh;
 }
 
 .computer-container {
@@ -48,18 +48,54 @@ p {
     align-items: flex-start;
 
     padding: 1.2vw;
-    font-size: 3vw;
+    font-size: 3vh;
+}
+
+.player-container p, .computer-container p, #player-score, #computer-score {
+    margin: 0px;
 }
 
 .status-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 
     text-align: center;
 }
 
-.player-container p, .computer-container p, #player-score, #computer-score {
-    margin: 0px;
+#btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 40%;
+    
+}
+
+#btn-container > * {
+    flex: auto;
+
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+
+    height: 7vh;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.rock {
+    background-image:  url("images/rock.png");
+}
+
+.paper {
+    background-image: url("images/paper.png");
+}
+
+.scissors {
+    background-image: url("images/scissors.png");
 }
